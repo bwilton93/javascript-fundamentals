@@ -15,5 +15,3 @@ const transform = (message, transformFunction) => {
 }
 
 console.log(transform('WHY ARE YOU SHOUTING', lowercaseMessage));
-
-test
