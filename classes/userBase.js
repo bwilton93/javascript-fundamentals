@@ -1,6 +1,6 @@
 class UserBase {
   constructor(names) {
-    this.users = users;
+    this.users = names;
   }
 
   count() {
@@ -8,11 +8,18 @@ class UserBase {
   }
 
   getNames() {
-    return users.map(users.getName());
+    return this.users.map(u => u.getName());
   }
 
   getIntroductions() {
-    
+    return this.users.map(u => u.getIntroduction());
+  }
+
+  getIntroductionsTwo() {
+    return this.users.reduce
+    ((arr, u) => [...arr, u.getIntroduction()], 
+    [],
+    );
   }
 }
 
