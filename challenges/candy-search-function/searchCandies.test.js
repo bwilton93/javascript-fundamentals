@@ -18,6 +18,12 @@ describe('searchCandies', () => {
     maxPrice = 2;
     expect(searchCandies(subString, maxPrice)).toStrictEqual([ 'Mars' ]);
   })
+  
+  it('returns an array of Skitties, Skittles, when passed "S" and "4"', () => {
+    subString = 'S';
+    maxPrice = 4;
+    expect(searchCandies(subString, maxPrice)).toStrictEqual([ 'Skitties', 'Skittles' ])
+  })
 })
 
 
