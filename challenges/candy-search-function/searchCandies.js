@@ -14,8 +14,9 @@ const candies = [
   { name: 'Fraise Tagada', price: 5.99 }
 ];
 
-function searchCandies(subString, price) {
-    let result = candies.filter(candy => candy.name.includes(subString));
+function searchCandies(subString, maxPrice) {
+    let result = candies.filter(candy => candy.name.includes(subString)
+                                && candy.price <= maxPrice);
     return result.map(candy => candy.name);
 };
 
