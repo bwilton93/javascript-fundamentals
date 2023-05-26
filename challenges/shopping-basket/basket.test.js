@@ -9,13 +9,14 @@ describe('basket', () => {
 
   it('can add an item to the basket', () => {
     const basket = new Basket;
-    const fakeCandy = {
-      getName: () => 'fakeCandy',
-      getPrice: () => 1.50
+    let fakeCandy = {
+      getName: () => 'Mars',
+      getPrice: () => 4.99
     };
 
     basket.addItem(fakeCandy);
     expect(basket.items.length).toBe(1);
+    expect(basket.getTotalPrice()).toBe(4.99);
   })
 })
 
