@@ -4,6 +4,10 @@ class Thermostat {
     this.powerSaving = true;
   }
 
+  togglePowerSaving() {
+    this.powerSaving = false;
+  }
+
   up() {
     this.temperature += 1;
   }

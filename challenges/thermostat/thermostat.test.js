@@ -10,6 +10,12 @@ describe('Thermostat', () => {
     const thermostat = new Thermostat;
     expect(thermostat.powerSaving).toBe(true);
   })
+  
+  it('powersaving can be turned off', () => {
+    const thermostat = new Thermostat;
+    thermostat.togglePowerSaving();
+    expect(thermostat.powerSaving).toBe(false);
+  })
 
   it('temperature can be increased using up method', () => {
     const thermostat = new Thermostat;
