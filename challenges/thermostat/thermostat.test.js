@@ -87,4 +87,13 @@ describe('Thermostat', () => {
     }
     expect(thermostat.energyUsage()).toBe('low-usage');
   })
+
+  it('returns high-usage when checking for > 25 degrees', () => {
+    const thermostat = new Thermostat;
+    thermostat.togglePowerSaving();
+    for (let i = 0; i < 10; i++) {
+      thermostat.up();
+    }
+    expect(thermostat.energyUsage()).toBe('high-usage');
+  })
 })
