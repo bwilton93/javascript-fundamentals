@@ -69,4 +69,12 @@ describe('Thermostat', () => {
     thermostat.reset();
     expect(thermostat.temperature).toBe(20);
   })
+
+  it('returns low-usage when checking energy usage for < 18 degrees', () => {
+    const thermostat = new Thermostat;
+    for (let i = 0; i < 2; i++) {
+      thermostat.down();
+    }
+    expect(thermostat.energyUsage()).toBe('low-usage');
+  })
 })
