@@ -29,6 +29,14 @@ describe('Thermostat', () => {
     thermostat.up();
     expect(thermostat.temperature).toBe(21);
   })
+
+  it('when powersaving on max temp is 25', () => {
+    const thermostat = new Thermostat;
+    for (let i = 0; i <= 10; i++) {
+      thermostat.up();
+    }
+    expect(thermostat.temperature).toBe(25);
+  })
   
   it('temperature can be decreased using down method', () => {
     const thermostat = new Thermostat;
