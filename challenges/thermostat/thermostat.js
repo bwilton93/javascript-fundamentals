@@ -12,6 +12,8 @@ class Thermostat {
     this.temperature += 1;
     if (this.powerSaving && this.temperature > 25) {
       this.temperature = 25;
+    } else if (this.temperature > 32) {
+      this.temperature = 32;
     }
   }
 
