@@ -19,4 +19,12 @@ describe(Pokedex, () => {
     pokedex.catch(fetchPokemon('jigglypuff'));
     expect(pokedex.myPokemon.length).toBe(2);
   })
+  
+  it('returns an array of one pokemon when one pokemon is added', () => {
+    const pokedex = new Pokedex;
+    pokedex.catch(fetchPokemon('pikachu'));
+    let result = pokedex.all();
+    expect(result.length).toBe(1);
+    expect(result.name).toBe('pikachu');
+  })
 })
