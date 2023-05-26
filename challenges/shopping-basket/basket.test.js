@@ -6,6 +6,17 @@ describe('basket', () => {
     expect(basket.items.length).toBe(0);
     expect(basket.getTotalPrice()).toBe(0);
   })
+
+  it('can add an item to the basket', () => {
+    const basket = new Basket;
+    const fakeCandy = {
+      getName: () => 'fakeCandy',
+      getPrice: () => 1.50
+    };
+
+    basket.addItem(fakeCandy);
+    expect(basket.items.length).toBe(1);
+  })
 })
 
 
