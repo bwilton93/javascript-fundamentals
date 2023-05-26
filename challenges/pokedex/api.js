@@ -20,10 +20,4 @@ function fetchPokemon(pokemon) {
     return pokemon;
 }
 
-fetchPokemon('pikachu')
-  .then((pokemon) => console.log(pokemon));
-
-fetchPokemon('charizard')
-  .then((pokemon) => console.log(pokemon));
-
 module.exports = fetchPokemon;
