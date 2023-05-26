@@ -70,6 +70,16 @@ describe('Thermostat', () => {
     expect(thermostat.temperature).toBe(20);
   })
 
+  it('returns medium-usage when checking energy usage for <= 25 degrees', () => {
+    const thermostat = new Thermostat;
+    expect(thermostat.energyUsage()).toBe('medium-usage');
+    for (let i = 0; i <= 5; i++) {
+      thermostat.up();
+    }
+    expect(thermostat.temperature).toBe(25)
+    expect(thermostat.energyUsage()).toBe('medium-usage');
+  })
+
   it('returns low-usage when checking energy usage for < 18 degrees', () => {
     const thermostat = new Thermostat;
     for (let i = 0; i < 2; i++) {
