@@ -6,6 +6,11 @@ describe('Thermostat', () => {
     expect(thermostat.temperature).toBe(20);
   })
 
+  it('thermostat power saving mode is initially on', () => {
+    const thermostat = new Thermostat;
+    expect(thermostat.powerSaving).toBe(true);
+  })
+
   it('temperature can be increased using up method', () => {
     const thermostat = new Thermostat;
     thermostat.up();
