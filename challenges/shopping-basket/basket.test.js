@@ -40,4 +40,8 @@ describe('basket', () => {
     expect(basket.items.length).toBe(3);
     expect(basket.getTotalPrice()).toBe(12.97)
   })
+
+  it('returns the correct price when applying a discount', () => {
+    const basket = new Basket;
+  })
 })
