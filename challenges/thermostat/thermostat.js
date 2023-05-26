@@ -5,7 +5,7 @@ class Thermostat {
   }
 
   togglePowerSaving() {
-    this.powerSaving = false;
+    this.powerSaving = !this.powerSaving;
   }
 
   up() {
