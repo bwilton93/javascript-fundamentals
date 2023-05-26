@@ -17,7 +17,8 @@ function fetchPokemon(pokemon) {
         types: data.types.map(element => element.type.name)
       }; 
     });
-    return pokemon;
+
+  return pokemon;
 }
 
 module.exports = fetchPokemon;

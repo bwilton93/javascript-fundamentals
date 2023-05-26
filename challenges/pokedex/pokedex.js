@@ -1,11 +1,22 @@
 class Pokedex {
   constructor() {
-    this.myPokemon = []
+    this.myPokemon = [];
   }
 
-  catch = (pokemon) => {
+  all() {
+    return this.myPokemon;
+  }
+
+  catch(pokemon) {
+    // this.pokemon = pokemon;
+    // console.log(pokemon);
     this.myPokemon.push(pokemon);
   }
 }
+
+// let pokedex = new Pokedex;
+// pokedex.catch(fetchPokemon('pikachu'));
+// console.log(pokedex.myPokemon);
+// console.log(fetchPokemon('pikachu'));
 
 module.exports = Pokedex;

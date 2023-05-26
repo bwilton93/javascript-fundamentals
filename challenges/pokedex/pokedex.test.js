@@ -9,7 +9,8 @@ describe(Pokedex, () => {
 
   it('a pokemon can be added to the pokedex using the catch method', () => {
     const pokedex = new Pokedex;
-    pokedex.catch(fetchPokemon('pikachu'));
+    let pokemon = fetchPokemon('pikachu')
+    pokedex.catch(pokemon);
     expect(pokedex.myPokemon.length).toBe(1);
   })
 
@@ -22,9 +23,13 @@ describe(Pokedex, () => {
   
   it('returns an array of one pokemon when one pokemon is added', () => {
     const pokedex = new Pokedex;
-    pokedex.catch(fetchPokemon('pikachu'));
-    let result = pokedex.all();
-    expect(result.length).toBe(1);
-    expect(result.name).toBe('pikachu');
+    fetchPokemon('pikachu')
+      .then((pokemon) => {
+        return pokemon
+      });
+      pokedex.catch(pokemon);
+      let result = pokedex.all();
+      expect(result.length).toBe(1);
+      expect(result.name).toBe('pikachu');
   })
 })
