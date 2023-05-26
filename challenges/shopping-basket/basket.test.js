@@ -1,5 +1,6 @@
 const exp = require('constants');
 const Basket = require('./basket');
+const { getPriority } = require('os');
 
 describe('basket', () => {
   it('initialises an empty shopping basket with a total price of 0', () => {
@@ -43,5 +44,15 @@ describe('basket', () => {
 
   it('returns the correct price when applying a discount', () => {
     const basket = new Basket;
+    let fakeCandy = {
+      getName: () => 'Mars',
+      getPrice: () => 4.99
+    };
+
+    basket.addItem(fakeCandy);
+
+    basket.applyDiscount(1);
+    expect(basket.discount).toBe(1);
+    expect(basket.getTotalPrice()).toBe(3.99);
   })
 })

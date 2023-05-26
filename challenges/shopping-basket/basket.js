@@ -5,7 +5,7 @@ class Basket {
   }
 
   applyDiscount(discount) {
-    discount = this.discount;
+    this.discount = discount;
   }
 
   addItem(candy) {
