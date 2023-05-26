@@ -27,6 +27,10 @@ class Thermostat {
   reset() {
     this.temperature = 20;
   }
+
+  energyUsage() {
+    return 'low-usage';
+  }
 }
 
 module.exports = Thermostat;
