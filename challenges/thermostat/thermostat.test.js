@@ -60,4 +60,13 @@ describe('Thermostat', () => {
     }
     expect(thermostat.temperature).toBe(10);
   })
+
+  it('temperature can be rest to 20 using a reset method', () => {
+    const thermostat = new Thermostat;
+    for (let i = 0; i <= 5; i++) {
+      thermostat.up();
+    }
+    thermostat.reset();
+    expect(thermostat.temperature).toBe(20);
+  })
 })
