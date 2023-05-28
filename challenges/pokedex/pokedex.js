@@ -17,9 +17,4 @@ class Pokedex {
   }
 }
 
-// let pokedex = new Pokedex;
-// pokedex.catch(fetchPokemon('pikachu'));
-// console.log(pokedex.myPokemon);
-// console.log(fetchPokemon('pikachu'));
-
 module.exports = Pokedex;
