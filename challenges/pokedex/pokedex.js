@@ -1,3 +1,5 @@
+const fetchPokemon = require('./api');
+
 class Pokedex {
   constructor() {
     this.myPokemon = [];
@@ -7,10 +9,11 @@ class Pokedex {
     return this.myPokemon;
   }
 
-  catch(pokemon) {
-    // this.pokemon = pokemon;
-    // console.log(pokemon);
-    this.myPokemon.push(pokemon);
+  catch(pokemonName) {
+    return fetchPokemon(pokemonName)
+      .then((pokemon) => {
+        this.myPokemon.push(pokemon);
+      })
   }
 }
 

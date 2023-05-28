@@ -4,7 +4,7 @@
 // Once the fetch has completed, then convert the response to JSON
 // Once the response is converted to JSON, then log out the data.
 
-function fetchPokemon(pokemon) {
+const fetchPokemon = (pokemon) => {
   pokemon = fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     .then((response) => response.json())
     .then ((data) => {
